@@ -9,13 +9,13 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-file-watcher-{{ version }}.tar.gz
   sha256: f3f9322b703d0eef93631f70198f861cb2b279ae59e879abc723d9961963bf37
   patches:
-    - qtpy.patch  # failed?
+    - qtpy.patch
     - setup.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
